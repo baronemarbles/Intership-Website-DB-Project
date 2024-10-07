@@ -129,39 +129,9 @@ h3{
     text-align: center;
 
     letter-spacing: 1.5px;
-    color:black;
+    color:rgb(20, 20, 20);
 }
 
-input[type=text],input[type=password] {
-    width: 96.5%;
-    height:15%;
-    border: 2px solid #bebebe;
-    background-color: #e0e0e0;
-    border-radius: 5px; 
-    text-align: center;
-    margin-bottom: 6%;
-    box-shadow: -3px 0px 0px  rgb(153, 0, 255);
-    transition: scale 0.2s ease-in-out;
-    display:block;
-  
-}
-
-
-
-
-input:focus{
-    scale:103%;
-    margin-left: 0%;
-    background-color: white;
-    color:black;
-   
-
-}
-
-form{
-    align-items: center;
-   
-}
 
 .buttn{
     
@@ -216,7 +186,6 @@ form{
     color:black;
     text-align: center;
     /*border-radius: 12px;*/ 
-    
     padding: 14px 16px;
     font-size: 17px;
     text-decoration: none;
@@ -232,14 +201,37 @@ form{
     display:none;
 }
 
-#registrar{
+#buscar{
     background-color:  rgb(147, 2, 204);
     color:white;
+    
     transition: background-color .2s ease-in;
 }
 
-#registrar:hover{
+#buscar:hover{
  background-color: rgb(124, 0, 173);   
+}
+
+
+#highlight_search_example{
+    color:rgb(147, 2, 204);
+    display:flex;
+    justify-content: center;
+
+}
+
+#Highlights{
+    color:rgb(147, 2, 204);
+}
+
+
+/*Inicio decoração das "saídas" da query*/
+
+.p_resultados{
+    height: 100%;
+    width:100%;
+    background-color: rgb(20, 20, 20);
+    border: 2px solid red;
 }
 
 
@@ -271,7 +263,7 @@ form{
     }
   }
 
-  @media(max-width:430){
+  @media (max-width:430) and (min-height:792px){
     body{
         background-image: url("/imgs/teste400px.png");
     }
@@ -298,6 +290,15 @@ form{
     width:fit-content;
     scale:75%;
   }
+
+  .centralized{
+    width:100%;
+  }
+
+.centralized p{
+    width: fit-content;
+}
+
 }
 
 
