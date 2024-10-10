@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Dispositivos VTV</title>
         <link rel="logo" href="/imgs/logo.png" type="image/png" sizes="16x16">
-        <link rel="stylesheet" href="css/update.css">
+        <link rel="stylesheet" href="css/teste_atualizar.css">
         <script src="/javascript/navmenu.js"></script>
     </head>
     
@@ -29,24 +29,23 @@
 
         <br>
 
-        <h3>Atualize o Dispostivo</h3>
+        
+    <br>
 
+ <!--Criando o menu de busca-->
         <div class="centralized">
-            <form action = "includes/dispositivoupdate.inc.php" method = "POST">
-                <input type = "text" name="campo" placeholder="Coluna do campo">
+        <form action = "includes/processaform_update.php" method = "POST">
+                <p>Encontre o dispositivo a ser alterado  <a id="Highlights"></a><br><pre id="highlight_search_example" >Tenho apenas o patrimonio do dispositivo. 
+                <a id="highlight_search_example">Logo, "patrimonio" e " 548622"</a></pre> 
+                </p>
+                <div id=box_form>
                 <input type ="text" name="patrimonio" placeholder="Patrimônio">
-                <input type ="password" name="val_atual" placeholder="Valor Atual">
-                <input type ="text" name="val_novo" placeholder="Novo valor">
-                <button class="buttn">Atualizar</button>
+                <button class= "buttn">Encontrar</button>
             </form>
-
         </div>
 
-        <?php
-            $con = mysqli_connect("127.0.0.1","root","","vtdb_controle","3306");
-            
+                    
 
-        ?> 
     </body>
     
     <footer></footer>
