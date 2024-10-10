@@ -8,3 +8,15 @@ and connection amongst the services and its processing.
 
 I would love to recieve tips from you guys, those who are more experienced etc. I want to learn more be better at my craft.
 All love yall.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+update--10/10{
++fix:Exibição dos dados direcionado para horizonal, como tabela
++feature:Busca retorna dados para a tabela com as labels e dá opção de deletar e atualizar. Ainda falta arrumar os arquivos de update e delete para alinhar com os parametros e variáveis.
+
+
+*Limpar o código
+*Prioridade para as opções de busca;
+}
