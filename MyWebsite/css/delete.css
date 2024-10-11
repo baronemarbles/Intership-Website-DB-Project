@@ -64,6 +64,17 @@ width:100%;
 
 }
 
+#verif_certeza{
+    display:inline;
+}
+
+#label_verif_certeza{
+
+    display:inline; 
+    color: rgb(153, 0, 255);
+
+}
+
 #back_buttn{
     border: 2px solid red;
     display:flex;
@@ -78,12 +89,13 @@ height:48px;
 width:98px;
 border: 2px solid white;
 border-radius: 42px;
-transition: scale .2s ease-in; 
+transition: background-color .2s ease-in-out; 
 
 }
 
 #bk_buttn:hover{
-    scale:103%;
+    background-color: gainsboro;
+    scale:100.5%;
 }
 
 p{
@@ -109,6 +121,10 @@ p{
 #legenda_delete{
     margin-top:0;
     margin-bottom:8%;
+    align-self: center;
+    color: rgb(147, 2, 204);
+    
+
 }
 
 @media (max-width:480px){
@@ -139,6 +155,8 @@ h1{
 
 h3{
     text-align: center;
+    color:white;
+    letter-spacing: .7px;
 }
 
 input[type=text],input[type=password] {
@@ -206,9 +224,9 @@ form{
 /*Menu Navegação*/
 
 .navmenu{
-    background-color:rgb(20, 20, 20);
+    background-color:rgb(233, 233, 233);
     height: fit-content;
-    width: 25.2%;
+    width: max-content;
     border-radius:18px;
     overflow: hidden;
     display: flex;
@@ -216,24 +234,25 @@ form{
     margin-right: auto;
     flex-direction: row;
     justify-content: center;
-    transition: width 1s ease-in-out;
+    /*transition: width 1s ease-in-out;*/
     
 }
 
 
 
 
-.navmenu:hover{
+/*.navmenu:hover{
     width:50%;
     }
-
+*/
 
 .navmenu a{
     float:left;
     display:block;
-    color:white;
+    color:black;
     text-align: center;
     /*border-radius: 12px;*/ 
+    
     padding: 14px 16px;
     font-size: 17px;
     text-decoration: none;
@@ -241,13 +260,24 @@ form{
     }
 
 .navmenu a:hover{
-    background-color: rgb(49, 49, 49);
-    color:white;
+    background-color: rgb(201, 201, 201);
+    
 }
 
 .navmenu .icon{
     display:none;
 }
+
+#deletar{
+    background-color:  rgb(147, 2, 204);
+    color:white;
+    transition: background-color .2s ease-in;
+}
+
+#deletar:hover{
+ background-color: rgb(124, 0, 173);   
+}
+
 
 
 @media screen and (max-width:600px){

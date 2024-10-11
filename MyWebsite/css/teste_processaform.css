@@ -98,6 +98,10 @@ p{
 .centralized p{
     color:white;
 }
+
+.label{
+    color:rgb(147, 2, 204);
+}
 @media (max-width:480px){
     .centralized{
         margin-inline: auto;
@@ -163,10 +167,22 @@ form{
    
 }
 
-.buttn{
+
+.buttns_container{
+    height:fit-content;
+    width:fit-content;
+    border: 2px solid red;
+    margin-inline: auto;;
+    display:flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+
+.bttn_update{
     
     margin-top: 25px;
-    display: block;
+    display: flex;
     background-color: rgb(105, 6, 145);
     color:white;
     border-radius: 8px;
@@ -175,7 +191,26 @@ form{
   
 }
 
-.buttn:hover {
+.bttn_update:hover {
+    animation-name: botao;
+    animation-duration: 1s;
+    
+    
+}
+
+.buttn_delete{
+    
+    margin-top: 25px;
+    display: flex;
+    background-color: rgb(105, 6, 145);
+    color:white;
+    border-radius: 8px;
+    border: 2px solid rgb(105, 6, 145);
+    
+  
+}
+
+.bttn_delete:hover {
     animation-name: botao;
     animation-duration: 1s;
     
