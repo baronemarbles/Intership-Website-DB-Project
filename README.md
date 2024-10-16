@@ -8,3 +8,17 @@ and connection amongst the services and its processing.
 
 I would love to recieve tips from you guys, those who are more experienced etc. I want to learn more be better at my craft.
 All love yall.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+update--16/10{
++fix: Arquivo e funcionalidade para fazer o update e verificação dos campos antigos x novos.
++fix: Arrumei a $query do arquivo de update que estava com problema.
++feature: Opção de atualizar qualquer campo.
+
+*Limpar o código
+*Prioridade para as opções de busca;
+}
+
