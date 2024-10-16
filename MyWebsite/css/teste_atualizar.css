@@ -61,24 +61,17 @@ body{
 
   /*fim barra scroll*/
 
-
-
-#bg_overlay{
-display: inline;
-height:100%;
-width:100%;
-
-}
-
-#legenda_delete{
+  p{
     color:white;
-}
-
-p{
-    margin-top:0px;
-    color:white;
+    text-align: center;
     
 }
+
+pre{
+    text-align: center;
+}
+
+
 
 
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf8-br">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Dispositivos VTV</title>
+        <title>Buscar Dispositivos | Dispositivos VTV</title>
         <link rel="logo" href="/imgs/logo.png" type="image/png" sizes="16x16">
         <link rel="stylesheet" href="css/index.css">
         <script src="/javascript/navmenu.js"></script>
@@ -30,24 +30,27 @@
 
         <!--Criando o formulário de registro -->
 
-       <br>
-       <br>
+        <h3>É esse o seu dispositivo ?</h3>
+
+        <?php 
+        
+         require "dbh.inc.php";
+         require "search_h.php";
+        
+        ?>
 
         <!--patrimonio,numero_de_serie,marca,modelo,categoria,localizacao, status_device,observacao -->
          <div class="centralized">
-            <h3>Registre o dispositivo</h3>
-
-            <form action = "includes/dispositivo.inc.php" class ="form"method = "POST">
-                <input type = "text" name="patrimonio" placeholder="Patrimônio" required>
-                <input type ="text" name="numero_de_serie" placeholder="Número de Série" required>
-                <input type ="text" name="marca" placeholder="Marca" required>
-                <input type ="text" name="modelo" placeholder="Modelo" required>
-                <input type ="text" name="categoria" placeholder="Categoria" required>
-                <input type ="text" name="localizacao" placeholder="Localização" required>
-                <input type ="text" name="status_device" placeholder="Estado do dispositivo" required>
-                <input type ="text" name="observacao" placeholder="Observação" required>
+            <form action = "includes/search_h.php" class ="form"method = "POST">
+                <input type = "text" name="patrimonio" placeholder="Patrimônio">
+                <input type ="text" name="numero_de_serie" placeholder="Número de Série">
+                <input type ="text" name="marca" placeholder="Marca">
+                <input type ="text" name="modelo" placeholder="Modelo">
+                <input type ="text" name="categoria" placeholder="Categoria">
+                <input type ="text" name="localizacao" placeholder="Localização">
+                <input type ="text" name="status_device" placeholder="Estado do dispositivo">
+                <input type ="text" name="observacao" placeholder="Observação">
                 <button class="buttn">Registrar</button>
-               
             </form>
         </div>
    
@@ -60,24 +63,6 @@
             
 
         ?> 
-
-    <!-- Criação do Script para não permitir--->
-    <!-- que não envie o formulário váizio. -->     
-        <script>
-                    const form = document.querySelector('form');
-                    const input =  document.querySelector('input');
-
-                    form.addEventListener('submit',function(event) {
-                        event.preventDefault();
-
-                        if(input.value.trim()===''){
-                            alert('Por favor preencha os campos!');
-                        } else {
-                            form.submit();
-                        }
-                        
-                    });
-                </script>
     </body>
     
     <footer></footer>

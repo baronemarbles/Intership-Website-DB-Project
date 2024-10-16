@@ -21,7 +21,7 @@ body{
     
 
     background-image: url("../imgs/testtt.png");
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
 
@@ -84,12 +84,14 @@ p{
 
 .centralized{
     width:max-content;
-    display:flex;
+    height:100%;
+    display: flex;
     flex-direction: column;
+    box-sizing:border-box;
     background-color: rgb(20, 20, 20);
     margin-left: auto;
     margin-right:auto;
-    padding:1%;
+    padding:20px;
     border-radius: 12px;
 }
 
@@ -106,6 +108,7 @@ p{
 
 h1{
     text-align: center;
+    position: static;
     letter-spacing: 2.5px;
     color:white;
     /*text-shadow: 0 0 20px purple;*/
@@ -124,13 +127,14 @@ h1{
 
 h3{
     text-align: center;
+    margin-top: 0px;
     letter-spacing: 1.5px;
-    color:black;
+    color:white;
 }
 
 input[type=text],input[type=password] {
     width: 96.5%;
-    height:15px;
+    height:15%;
     border: 2px solid #bebebe;
     background-color: #e0e0e0;
     border-radius: 5px; 
@@ -186,7 +190,7 @@ form{
 .navmenu{
     background-color:rgb(233, 233, 233);
     height: fit-content;
-    width: 25.2%;
+    width: max-content;
     border-radius:18px;
     overflow: hidden;
     display: flex;
@@ -194,17 +198,17 @@ form{
     margin-right: auto;
     flex-direction: row;
     justify-content: center;
-    transition: width 1s ease-in-out;
+    /*transition: width 1s ease-in-out;*/
     
 }
 
 
 
 
-.navmenu:hover{
+/*.navmenu:hover{
     width:50%;
     }
-
+*/
 
 .navmenu a{
     float:left;
@@ -231,17 +235,16 @@ form{
 #registrar{
     background-color:  rgb(147, 2, 204);
     color:white;
+    transition: background-color .2s ease-in;
 }
 
-@media screen and (max-width:600px){
-    .navmenu:not(:first-child){display:none;}
-    .navmenu a.icon{
-        float:right;
-        display:block;
-    }
+#registrar:hover{
+ background-color: rgb(124, 0, 173);   
 }
 
-@media screen and (max-width: 600px) {
+
+
+/*@media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -253,7 +256,49 @@ form{
       display: block;
       text-align: left;
     }
+      
   }
+*/
+
+  @media (max-width:600px){
+    [class*="navmenu"]{
+        width:fit-content;
+        scale:90%;
+    }
+
+    body{
+        background-size: 430px 935px;
+    }
+  }
+
+  @media(max-width:430){
+    body{
+        background-image: url("/imgs/teste400px.png");
+    }
+  }
+
+  @media (max-width:400px){
+    *{
+      
+        height:fit-content;
+    }
+  }
+
+  @media(max-width:390px){
+    .navmenu{
+
+
+       width:100%;
+
+       
+    ;
+  }
+
+  .navmenu a{
+    width:fit-content;
+    scale:75%;
+  }
+}
 
 
 @keyframes botao {

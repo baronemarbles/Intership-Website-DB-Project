@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Dispositivos VTV</title>
         <link rel="logo" href="/imgs/logo.png" type="image/png" sizes="16x16">
-        <link rel="stylesheet" href="css/update.css">
+        <link rel="stylesheet" href="css/teste_atualizar.css">
         <script src="/javascript/navmenu.js"></script>
     </head>
     
@@ -29,24 +29,41 @@
 
         <br>
 
-        <h3>Atualize o Dispostivo</h3>
+        
+    <br>
 
+ <!--Criando o menu de busca-->
         <div class="centralized">
-            <form action = "includes/dispositivoupdate.inc.php" method = "POST">
-                <input type = "text" name="campo" placeholder="Coluna do campo">
-                <input type ="text" name="patrimonio" placeholder="Patrimônio">
-                <input type ="password" name="val_atual" placeholder="Valor Atual">
-                <input type ="text" name="val_novo" placeholder="Novo valor">
-                <button class="buttn">Atualizar</button>
+        <form action = "includes/processaform_update.php" method = "POST">
+                <p>Encontre o dispositivo a ser alterado  <a id="Highlights"></a><br>
+                <pre id="highlight_search_example" >E depois faça suas alterações.</pre> 
+                </p>
+                <div id=box_form>
+                <input type ="text" name="patrimonio" placeholder="Patrimônio" required>
+                <button class= "buttn">Encontrar</button>
             </form>
-
         </div>
 
-        <?php
-            $con = mysqli_connect("127.0.0.1","root","","vtdb_controle","3306");
-            
 
-        ?> 
+    <!-- Criação do Script para não permitir--->
+    <!-- que não envie o formulário váizio. -->     
+    <script>
+                    const form = document.querySelector('form');
+                    const input =  document.querySelector('input');
+
+                    form.addEventListener('submit',function(event) {
+                        event.preventDefault();
+
+                        if(input.value.trim()===''){
+                            alert('Por favor preencha os campos!');
+                        } else {
+                            form.submit();
+                        }
+                        
+                    });
+                </script>        
+                    
+
     </body>
     
     <footer></footer>
