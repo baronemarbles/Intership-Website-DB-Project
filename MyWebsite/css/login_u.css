@@ -1,0 +1,103 @@
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.unna-regular {
+    font-family: "Unna", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body{
+    
+    
+    background-image: url("../imgs/Lockscreen.png");
+    background-size:cover;
+   
+
+}
+
+.unna-bold {
+  font-family: "Unna", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0px;
+    color:white;
+    size:75px;
+    text-shadow:  0px 8px 25px rgb(179, 224, 255);
+      
+}
+
+.centralized{
+    position:absolute;
+    left:50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    justify-self: center;
+    
+    align-self: center;
+    align-items: center;
+    padding:20px;
+    height:fit-content;
+    width: fit-content;
+    
+    border-radius: 12px;
+    background-color: rgb(20,20,20);
+    backdrop-filter: blur(20px);
+    
+}
+
+form{
+    display:flex;
+    padding:25px;
+    border:2px solid red;
+    flex-direction: column;
+    
+}
+
+form input{
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    transition: scale .2s;
+
+
+}
+
+form input:focus{
+    scale:102%;
+}
+
+.buttn{
+    border: 1px solid rgb(179, 224, 255);
+    width:fit-content;
+    border-radius:8px;
+    margin: auto;
+    background-color:  rgb(179, 224, 255);
+    transition: scale 0.1s;
+    
+}
+
+.buttn:hover{
+    scale:102%;
+    box-shadow: 0x 0x 20px rgb(7, 111, 180);
+}
+
+
+#mini_icons{
+    size: 10px;
+}
+
+
+
+@media (max-width:430px) and (max-height:932px){
+    body{
+        background-image: url("../imgs/Lockscreen_iphone_max.png");
+    }
+}

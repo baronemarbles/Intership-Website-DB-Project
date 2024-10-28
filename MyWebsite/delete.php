@@ -10,6 +10,28 @@
     
     <body>
         
+
+
+         <!--Criação do menu do usuário-->
+
+         <div class='accountMenuContainer'>
+            <div class='icon_container'>
+                <div class= 'icon'> <img class='items_icons'src='imgs\user_icon.png'><?($_SESSION['username']);?>
+                    <span class='icone_esq'></span>
+                    <span class='icone_dir'></span>
+
+                    <div class='items'>
+                        <a href='index.php' style='--i:1;'><span></span><img class='items_icons'src='imgs\home.svg'>Início</a>
+                        <a href='account_config.php' style='--i:2;'><img class='items_icons'src='imgs\gear.svg'>Configurações</a>
+                        <a href='includes/logout.php' style='--i:3;'><img class='items_icons'src='imgs\logout.svg'>Logout</a>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+
+
+
         <img id="logo_on_page"src="imgs\logo.png" alt="Logotipo da SBT">
         <h1 class="bebas-neue-regular ">Dispositivos vtv</h1>
 
@@ -21,28 +43,27 @@
             <a class=".bebas-neue-regular" href="delete.php" id="deletar">Deletar</a>
             <a class=".bebas-neue-regular" href="search.php" id="buscar">Buscar</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
             </a>
         </div>
 
         <br>
         
 
-        <h3>Delete o dispositivo</h3>
+        
 
         <!--patrimonio,numero_de_serie,marca,modelo,categoria,localizacao, status_device,observacao -->
         <div class="centralized">
+            <h3>Delete o dispositivo</h3>
         
-        <p id="legenda_delete">Deletar todas as informações do dispositivo</p>
-        
-        <form action = "includes/deletedispositivo.inc.php" method = "POST">
-            <input type = "text" name="patrimonio" placeholder="Patrimônio">
-            <!--<input type ="text" name="numero_de_serie" placeholder="Número de Série">-->
-            <input type ="text" name="localizacao" placeholder="Localização">
-            
-            <button class="buttn">Deletar</button>
-        </form>
+            <form action = "includes/deletedispositivo.inc.php" method = "POST">
+                <input type = "text" name="patrimonio" placeholder="Patrimônio" required>
+                <input type ="text" name="localizacao" placeholder="Localização" required>
+                <div id="div_verif_certeza"><input type="checkbox" name="verif_certeza" id="verif_certeza" value="1"><label for="verif_certeza" id="label_verif_certeza">Tem certeza que deseja deletar todas as informações do dispositivo ?</label> </div>
+                <button type="submit" class="buttn">Deletar</button>
+            </form>
         </div>
+        
         <br>
 
             <div id="back_buttn"><a href="index.php"><button id="bk_buttn">Voltar</button></a></div>
@@ -50,8 +71,26 @@
         <?php
             $con = mysqli_connect("127.0.0.1","root","","vtdb_controle","3306");
             
-
         ?> 
+
+        <!-- Criação do Script para não permitir--->
+        <!-- que não envie o formulário váizio. -->
+        <script>
+            const form = document.querySelector('form');
+            const input =  document.querySelector('input');
+
+            form.addEventListener('submit',function(event) {
+                event.preventDefault();
+
+                if(input.value.trim()===''){
+                    alert('Por favor preencha os campos!');
+                } else {
+                    form.submit();
+                }
+                
+            });
+        </script>
+
     </body>
     
     <footer></footer>
