@@ -8,3 +8,8 @@ and connection amongst the services and its processing.
 
 I would love to recieve tips from you guys, those who are more experienced etc. I want to learn more be better at my craft.
 All love yall.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
++update: quase prontpo
+
