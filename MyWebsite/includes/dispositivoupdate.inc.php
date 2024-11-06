@@ -6,20 +6,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $campo = $_POST["campo"];
         $val_atual = $_POST["val_atual"];
         $val_novo = $_POST["val_novo"];
-        $patrimonio;
+        $patrimonio = $_POST["patrimonio"];
         
        
         
 
         try{
             require "dbh.inc.php";
-            $get_patrimonio = "SELECT patrimonio from teste db where :campo = :val_atual;";
+            $query = "SELECT $campo from testedb where patrimonio = :patrimonio;";
             #$check_campo_antigo = "SELECT :campo from testedb where :campo = :val_atual AND patrimonio = $get_patrimonio;";
         
-            $stmt= $pdo->prepare($get_patrimonio);
-            $stmt->bindParam(":campo",$campo);
-            $stmt->bindParam(":val_atual",$val_atual);
+            $stmt= $connection-> $pdo->prepare($query);
+            $stmt->bindParam(":patrimonio",$patrimonio);
             $stmt->execute();
+            $results = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if($results&& $results[$campo] == $val_atual){
+                $update = "UPDATE testedb SET $campo= :val_novo where patrimonio= :patrimonio";
+                $updt= $pdo->prepare($update);
+                $updt->bindParam(":val_novo",$val_novo);
+                $updt->bindParam(":patrimonio",$patrimonio);
+                $updt->execute();
+                echo"<style>background-image:url('../imgs/testtt.png'); 
+                    #worked{
+                    text-align:center;
+                    margin-inline:auto;}
+                </style>";
+                echo"<h2 id='worked'>Atualização bem-sucedida!<h2>";
+              
+            } else{
+                echo "Dados não coincidem ou dispositivos não foram encontrado";
+            }
            
             /*
                 if($get_patrimonio==$val_atual){
@@ -49,8 +66,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         
             $pdo = null;
             $stmt = null;
+            $updt =null;
 
-            header("Location: ../index.php");    
+          /* header("Location: ../index.php");*/
             die();
         } catch(PDOException $e) {
             die("Query falhou: " .$e->getMessage());

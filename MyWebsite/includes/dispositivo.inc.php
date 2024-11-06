@@ -1,6 +1,13 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['username'])) {
+    header('Location: login_u.php');
+    exit();
+}
 #patrimonio,numero_de_serie,marca,modelo,categoria,localizacao, status_device,observacao
+
+
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
         $patrimonio = $_POST["patrimonio"];
@@ -11,13 +18,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $localizacao = $_POST["localizacao"];
         $status_device = $_POST["status_device"];
         $observacao = $_POST["observacao"];
+        $username=$_SESSION['username'];
        
         
 
     try{
         require "dbh.inc.php";
         
-        $query = "INSERT INTO testedb(patrimonio, numero_de_serie, marca, modelo, categoria, localizacao, status_device, observacao) VALUES(:patrimonio, :numero_de_serie, :marca, :modelo, :categoria, :localizacao, :status_device, :observacao);";
+        $query = "INSERT INTO testedb(patrimonio, numero_de_serie, marca, modelo, categoria, localizacao, status_device, observacao,username) VALUES(:patrimonio, :numero_de_serie, :marca, :modelo, :categoria, :localizacao, :status_device, :observacao,:username);";
         
         $stmt= $pdo->prepare($query);
         
@@ -29,11 +37,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(":localizacao",$localizacao);
         $stmt->bindParam(":status_device",$status_device);
         $stmt->bindParam(":observacao",$observacao);
+        $stmt->bindParam(":username",$username);
+        
         
 
 
         $stmt->execute();
-        
+
+
         $pdo = null;
         $stmt = null;
 
