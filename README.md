@@ -5,6 +5,7 @@ We're using PHP with no frameworks, MYSQL and PHPmyAdmin to manage the data and 
 We're looking forward to implement new frameworks such as Laravel, reactnative or other functional frameworks that allow us to improve the flow, speed 
 and connection amongst the services and its quality.
 
+Take a look at the last brench to see the current last version of the code. Im still developing it and it needs a lot of corrections about clean code, but im on my way to achieve that.
 
 I would love to recieve tips and advices from you guys, those who are more experienced etc. I want to learn more be better at my craft.
 All love yall.
