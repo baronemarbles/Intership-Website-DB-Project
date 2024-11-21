@@ -6,5 +6,5 @@ We're looking forward to implement new frameworks such as tailwind, reactnative 
 and connection amongst the services and its processing. 
 
 
-I would love to recieve tips from you guys, those who are more experienced etc. I want to learn more be better at my craft.
+I would love to recieve tips and advice from you guys, those who are more experienced etc. I want to learn more be better at my craft.
 All love yall.
