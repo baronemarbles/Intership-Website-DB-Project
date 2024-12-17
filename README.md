@@ -9,3 +9,8 @@ Take a look at the latest brenches to see the current/last version of the code. 
 
 I would love to recieve tips and advices from you guys, those who are more experienced etc. I want to learn more to be better at my craft.
 All love yall.
+<hr>
+
+update--16/10{
++update: Upload do notebook do Google Colab no qual eu fiz o tratamento dos dados verdadeiros do projeto.
+
