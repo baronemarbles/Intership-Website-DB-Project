@@ -1,4 +1,4 @@
-This proejct is directed by me and my intership supervisor and we aim to create a database system that stores the company devices and that can be acessed remotelly. So it can allow 
+This proejct is being directed by me and my intership supervisor and we aim to create a database system that stores the company devices and that can be acessed remotelly. So it can allow 
 employees of the I.T department, those who have a credential in the users database, to register, update, delete or query a specific device(s), either pulling all the informations about these devices if allowed or a specific one.
 
 We're using pure PHP, so no frameworks so far, MYSQL and PHPmyAdmin to manage the data and database. CSS for styling purpuses And JavaScript to stablish and control the webpage behaviours. 
